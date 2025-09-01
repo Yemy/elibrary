@@ -28,6 +28,7 @@ export const sendEmail = async ({
     },
     body: {
       from: "Adey Technologies <info@adeytechnologies.com>",
+      // <hello.adeytechnologies.com>
       to: [email],
       subject,
       html: message,
