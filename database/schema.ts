@@ -10,7 +10,7 @@ import {
 } from "drizzle-orm/pg-core";
 
 const ROLE_ENUM = pgEnum("role", ["USER", "ADMIN"]);
-const STATUS_ENUM = pgEnum("status", ["PENDING", "APPROVED", "REJECTED"]);
+const STATUS_ENUM = pgEnum("status", ["PENDING", "ACTIVE", "INACTIVE"]);
 const BORROW_STATUS_ENUM = pgEnum("borrow_status", [
   "OVERDUE",
   "BORROWED",

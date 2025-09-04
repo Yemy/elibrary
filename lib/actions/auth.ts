@@ -41,13 +41,13 @@ export async function signUp(params: AuthCredentails) {
       universityCard,
     });
 
-    await workflowClient.trigger({
-      url: `${config.env.prodApiEndpoint}/api/workflow/onboarding`,
-      body: {
-        email,
-        fullname,
-      },
-    });
+    // await workflowClient.trigger({
+    //   url: `${config.env.prodApiEndpoint}/api/workflow/onboarding`,
+    //   body: {
+    //     email,
+    //     fullname,
+    //   },
+    // });
 
     // sign in on behalf of the new user
     await signInWithCredentials({ email, password });

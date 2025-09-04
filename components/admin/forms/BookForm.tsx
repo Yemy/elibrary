@@ -24,7 +24,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { createBook, editBook } from "@/lib/admin/actions/book";
 
 interface Props extends Partial<Book> {
-  type?: "create" | "update";
+  type: "create" | "update";
 }
 
 const BookForm = ({ type, ...book }: Props) => {

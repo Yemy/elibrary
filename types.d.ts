@@ -12,7 +12,7 @@ interface User {
   email: string;
   universityId: number;
   universityCard: string;
-  status: "PENDING" | "APPROVED" | "REJECTED" | null;
+  status: "PENDING" | "ACTIVE" | "INACTIVE" | null;
   role: "USER" | "ADMIN" | null;
   lastActivityDate: string | null;
   createdAt: Date | null;
@@ -90,7 +90,7 @@ interface Metdata {
 
 interface UpdateAccountStatusParams {
   userId: string;
-  status: "PENDING" | "APPROVED" | "REJECTED";
+  status: "PENDING" | "ACTIVE" | "INACTIVE";
 }
 
 interface UpdateBookParams extends BookParams {

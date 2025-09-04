@@ -5,7 +5,7 @@ import { updateAccountStatus } from "@/lib/admin/actions/user";
 
 const AccountConfirmation = ({ user }: { user: User }) => {
   const confirmationAction =
-    user.status === "PENDING" || user.status === "REJECTED"
+    user.status === "PENDING" || user.status === "INACTIVE"
       ? "approve"
       : "deny";
 
@@ -36,12 +36,12 @@ const AccountConfirmation = ({ user }: { user: User }) => {
     if (confirmationAction === "approve") {
       updateAccountStatus({
         userId: user.id,
-        status: "APPROVED",
+        status: "ACTIVE",
       });
     } else {
       updateAccountStatus({
         userId: user.id,
-        status: "REJECTED",
+        status: "INACTIVE",
       });
     }
   };

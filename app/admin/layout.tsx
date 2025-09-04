@@ -21,7 +21,7 @@ const AdminLayout = async ({ children }: { children: ReactNode }) => {
     .from(users)
     .where(eq(users.id, session.user?.id))
     .limit(1)
-    .then((res) => res[0].isAdmin === "ADMIN");
+    .then((res) => res[0].isAdmin === "USER");
 
   if (!isAdmin) redirect("/");
 
